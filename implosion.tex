@@ -1,0 +1,151 @@
+\documentclass{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{hypothesis}{Hypothesis}
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\title[Compact support of an isentropic implosion]{Compact support of an isentropic implosion\\
+{\large A conditional blueprint}}
+\author{}
+\date{27 September 2026}
+
+\begin{document}
+
+\begin{abstract}
+A compactly supported physical-vacuum realisation of a radial isentropic
+self-similar implosion is reduced to a mixed one-dimensional free-boundary
+problem. The interior coincidence with the profile on the sonic cone is
+proved. Existence of the vacuum collar is conditional on the energy pairings
+of Coutand--Shkoller, \emph{Comm.\ Pure Appl.\ Math.}\ 64 (2011),
+Lemma~3.1 and Theorem~8.1, transferred to a chart with one lock and one
+vacuum end. This is not a resolution of the Clay Navier--Stokes problem.
+\end{abstract}
+
+\maketitle
+\enlargethispage{6pt}
+
+\section{Setting}
+Radial isentropic Euler, $d\in\{2,3\}$, $\gamma>1$.
+Profile: Merle--Rapha\"el--Rodnianski--Szeftel~\cite{MRRS2022}
+or Buckmaster--Cao-Labora--G\'omez-Serrano~\cite{BCLGS2025}.
+Sonic ray $Z=Z_s$, $r_s(t)=Z_s(-t)^\lambda$.
+Collar $[r_{\mathrm{br}},R_0]$ with physical vacuum at $R_0$.
+Lock set $\mathcal{S}$:
+\[
+J_+(t,a_*)=\sigma(t)\quad\text{on }[t_0,0),\qquad
+\sigma(t)=\bar J_+\bigl(t,\bar\eta(t,\bar a_*)\bigr).
+\]
+
+\section{Stretched bridge}
+$Z_0$ first, then $L$. No circular dependence.
+$r_{\mathrm{in}}=Z_0(-t_0)^\lambda$ so that
+\[
+\max_{k=1,2,3}|\partial_r^k(u,c)|_{r_{\mathrm{in}}}<\mathrm{Lip}_*/8.
+\]
+Then
+\[
+L>\frac{35}{16}\frac{|q_0^{\mathrm{br}}-q_0^{\mathrm{in}}|}{\mathrm{Lip}_*/2}.
+\]
+$D_t J_+=-c\,\partial_r J_+-c\frac{d-1}{r}u$, $\det=c^6>0$.
+Degree-7 Hermite, $C_*=35/16$.
+$Z_\Gamma(t_0)>Z_s$, $\mu(t_0)>0$.
+\[
+\mathrm{Lip}_*=\min\bigl(1/|t_0|,\,\mu(t_0)(-t_0)^{-\lambda}/4\bigr).
+\]
+
+\section{Variational formulation}
+$V_*=\{\varphi\in H^1(I):\varphi(a_*)=0\}$.
+Not $V_{00}$. The edge is free: $v(1)=\dot R$.
+Cutoff $\omega\equiv0$ near $a_*$, $\omega\equiv1$ near vacuum.
+Lift $v_L$ supported in $\{\omega=0\}$.
+Option~B basis $\phi_k(y)=(y-a_*)^k$, $k\ge1$.
+The bound $C(M_0,N)$ is only for the finite ODE.
+Uniform energy uses the continuous weak form on $V_*$.
+
+\section{Energy estimates}
+Split $\mathcal{E}^{(N)}=\mathcal{E}_{\mathrm{in}}^{(N)}+\mathcal{E}_{\mathrm{vac}}^{(N)}$.
+Fluxes at $a_*$ die by $\varphi(a_*)=0$.
+Fluxes at $y=1$ die by $p(1)=\rho_0(1)=0$.
+
+For $\gamma\ge2$ ($a_0=0$):
+\begin{equation}
+\label{eq:energy}
+\begin{split}
+\frac{d}{dt}(\mathcal{E}_{\mathrm{in}}^{(N)}+\mathcal{E}_{\mathrm{vac}}^{(N)})
+&+\frac78\kappa\int_I\omega\rho_0^2|\partial_t^4\partial_y w^{(N)}|^2 \\
+&\le C(M_0)\mathcal{E}^{(N)}+C\|\sigma\|_{W^{4,\infty}}^2.
+\end{split}
+\end{equation}
+For $\gamma\in(1,2)$ add the Theorem~8.1 sum, $d=1-y$,
+$a_0$ from $1<1+1/(\gamma-1)-a_0\le2$:
+\[
+\sum_{a=0}^{a_0}
+\Bigl\|
+\sqrt{d}^{\,1+1/(\gamma-1)-a}\,
+\partial_t^{4+a_0-a}\partial_y w^{(N)}
+\Bigr\|_{L^2(\{\omega=1\})}^2.
+\]
+Explicitly:
+\begin{itemize}
+\item $\gamma=5/3$, $a_0=1$:
+$\|d^{5/4}\partial_t^5\partial_y w\|_{L^2}^2
++\allowbreak\|d^{3/4}\partial_t^4\partial_y w\|_{L^2}^2$.
+\item $\gamma=7/5$, $a_0=2$:
+$\|d^{7/4}\partial_t^6\partial_y w\|_{L^2}^2
++\allowbreak\|d^{5/4}\partial_t^5\partial_y w\|_{L^2}^2
++\allowbreak\|d^{3/4}\partial_t^4\partial_y w\|_{L^2}^2$.
+\item $\gamma=2$, $a_0=0$: model energy only.
+\end{itemize}
+The line $d^{1/4}\partial_t^5\partial_y w$ is not Theorem~8.1.
+
+$\mathcal{C}_4$ against $\partial_t^4 w$:
+$j=1$ by Lemma~3.1 on $\partial_t^3 p\in H_0^1$;
+$j=2,3$ by $\mathcal{E}_{\mathrm{vac}}$;
+$j=4$ by $\|\partial_y p/\rho_0\|_\infty$ and Theorem~8.1.
+Young into the right-hand side of~\eqref{eq:energy} plus
+$\frac18\kappa\int\omega\rho_0^2|\partial_t^4\partial_y w|^2$.
+
+Citation:~\cite{CS2011}, Lemma~3.1 and Theorem~8.1.
+Not Theorem~1.1.
+
+\[
+T^*=\min\left(|t_0|,\,
+C(M_0)^{-1}\ln\left(1+\frac{C(M_0)M_0}{C(M_0)M_0+C\|\sigma\|_{W^{4,\infty}}^2}\right)
+\right).
+\]
+
+\section{Continuation and the theorem}
+Mesh $t_k=t_0+kT^*$, $K=\lceil|t_0|/T^*\rceil$.
+$N\to\infty$, $\kappa\to0$: Aubin--Lions on $\{\omega=1\}$,
+Rellich on $\{\omega=0\}$.
+Lock exact on $V_*$, limit in $\mathcal{S}$.
+Cone $\mathcal{K}=\{(t,r):r\le Z_s(-t)^\lambda\}$.
+Friedrichs system in $U=\bigl(\tfrac{2}{\gamma-1}c,\,u\bigr)$, $A_0=I$,
+source $F=\bigl(-\tfrac{d-1}{r}cu,\,0\bigr)$~\cite{Kato1975}.
+On the profile, $\partial\mathcal{K}$ is a sonic characteristic:
+$\dot r_s=\bar u-\bar c$. Then $\delta U=0$ on $\mathcal{K}$.
+
+\begin{hypothesis}[H]
+The mixed $\kappa$-problem on $V_*$ admits approximants in $\mathcal{S}$
+on $[t_0,0)$, uniformly bounded in $\mathcal{E}_{\mathrm{collar}}$,
+with $\kappa\to0$ remaining in $\mathcal{S}$ and keeping physical vacuum.
+\end{hypothesis}
+
+\begin{theorem}[conditional]
+Assume Hypothesis~H and the pairings of~\cite{CS2011}, Lemma~3.1 and
+Theorem~8.1, on $\{\omega=1\}$. There is a compactly supported
+physical-vacuum solution on $[t_0,0)$ with
+$(\rho,u)=(\bar\rho,\bar u)$ on $\{Z\le Z_s\}$,
+$\rho=0$ for $r\ge R(t)$, and $R(t)>r_s(t)$.
+\end{theorem}
+
+\begin{remark}
+Not Clay.
+\end{remark}
+
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}
