@@ -1,16 +1,18 @@
 # implosion-blueprint
 
-Freeze of the **2-page conditional implosion blueprint** (`V_*` variational setting).
+Archive of a compactly supported physical-vacuum realisation of a radial isentropic Euler implosion, matching a known self-similar core on the sonic cone. The $\gamma\ge 2$ letter is conditional on the one-sided Coutand--Shkoller 2011 embeddings (Lemma 3.1 and model energy (1.13)). This is compressible Euler with a vacuum edge. It is not Navier--Stokes and not a Clay Millennium Problem.
 
-**Status:** Conditional blueprint. Hypothesis H not proved. **Not Clay.**
+**Status.** Core coincidence on $\mathcal{K}$ is written. Collar existence for $\gamma\ge 2$ cites CS 2011. Hypothesis H remains open for $\gamma\in(1,2)$. Not Clay.
 
 ## Files
 
 | File | Role |
 |------|------|
-| `PAPER.md` | Compact markdown blueprint |
-| `implosion.tex` | AMS article source |
-| `references.bib` | BibTeX |
-| `implosion.pdf` | Built PDF |
+| `implosion_gamma2.tex` | $\gamma\ge 2$ letter source |
+| `PAPER_GAMMA2.md` | Companion note for that letter |
+| `implosion.tex` | Broader blueprint (all $\gamma>1$, H open for physical gases) |
+| `PAPER.md` | Broader markdown blueprint |
+| `references.bib` | Shared BibTeX (`CS2011`, `MRRS2022`, `BCLGS2025`, `Kato1975`) |
+| `implosion.pdf` | Built PDF of the broader blueprint |
 
-Work only in this repo directory. Do not `git add` from `C:\\Users\\heywo` (home is a separate git repo).
+Do not retitle this repository as a Clay or Navier--Stokes result.

@@ -3,11 +3,11 @@
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}
-\theoremstyle{remark}
+\theoremstyle{definition}
 \newtheorem{remark}{Remark}
 
-\title[Compact support of an isentropic implosion]{Compact support of an isentropic implosion for $\gamma\ge 2$\\
-{\large A conditional 1D collar theorem}}
+\title[Compact support of an isentropic implosion]{Compact support of an isentropic implosion\\
+{\large $\gamma\ge 2$, a conditional letter}}
 \author{}
 \date{27 September 2026}
 
@@ -15,13 +15,14 @@
 
 \begin{abstract}
 A compactly supported physical-vacuum realisation of a radial isentropic
-self-similar implosion is constructed for adiabatic exponents $\gamma\ge 2$.
-Coincidence with the background profile on the sonic cone is proved by Kato.
-Existence of the vacuum collar is reduced to a mixed one-dimensional
-free-boundary problem and is conditional on the one-sided transfer of the
-Coutand--Shkoller $\gamma=2$ embeddings (energy~(1.13) and Lemma~3.1).
-Theorem~8.1 is not used. This is not a resolution of the Clay
-Navier--Stokes problem.
+self-similar implosion is constructed for adiabatic exponent $\gamma\ge 2$.
+Interior coincidence with the profile on the sonic cone is proved.
+Existence of the vacuum collar is conditional on the one-sided transfer of
+Coutand--Shkoller, \emph{Comm.\ Pure Appl.\ Math.}\ 64 (2011),
+Lemma~3.1 and the $\gamma=2$ model energy~(1.13),
+to a chart with one incoming lock and one vacuum end.
+Theorem~8.1 is not used.
+This is not a resolution of the Clay Navier--Stokes problem.
 \end{abstract}
 
 \maketitle
@@ -32,58 +33,64 @@ Profile: Merle--Rapha\"el--Rodnianski--Szeftel~\cite{MRRS2022}
 or Buckmaster--Cao-Labora--G\'omez-Serrano~\cite{BCLGS2025}.
 Sonic ray $Z=Z_s$, $r_s(t)=Z_s(-t)^\lambda$.
 Collar $[r_{\mathrm{br}},R_0]$ with physical vacuum at $R_0$.
-Lock
+Lock:
 \[
-J_+(t,a_*)=\sigma(t)=\bar J_+\bigl(t,\bar\eta(t,\bar a_*)\bigr)
-\quad\text{on }[t_0,0).
+J_+(t,a_*)=\sigma(t)\quad\text{on }[t_0,0),\qquad
+\sigma(t)=\bar J_+\bigl(t,\bar\eta(t,\bar a_*)\bigr).
 \]
 
 \section{Bridge and variational setting}
-$Z_0$ first, then $L$. Tail jets below $\mathrm{Lip}_*/8$, then
-$L>(35/16)|q_0^{\mathrm{br}}-q_0^{\mathrm{in}}|/(\mathrm{Lip}_*/2)$.
-Jet map $\det=c^6>0$. Degree-7 Hermite, $C_*=35/16$.
-Trial space $V_*=\{\varphi\in H^1((a_*,1)):\varphi(a_*)=0\}$.
-The vacuum edge is free: $v(1)=\dot R$.
-Cutoff $\omega\equiv0$ near the lock, $\omega\equiv1$ near vacuum.
-
-\section{Model energy}
-Split $\mathcal{E}=\mathcal{E}_{\mathrm{in}}+\mathcal{E}_{\mathrm{vac}}$.
-Fluxes die at $a_*$ by the lock and at $y=1$ by $p(1)=\rho_0(1)=0$.
-Convective and metric products close on the model-energy ball by the
-1D embeddings in Coutand--Shkoller~\cite{CS2011}, energy~(1.13) and
-Lemma~3.1, transferred to one vacuum end. Those embeddings are local
-and do not use a second vacuum end.
+$Z_0$ first, then $L$. No circular dependence.
+$r_{\mathrm{in}}=Z_0(-t_0)^\lambda$ so that
+$\max_{k=1,2,3}|\partial_r^k(u,c)|_{r_{\mathrm{in}}}<\mathrm{Lip}_*/8$.
+Then $L>(35/16)|q_0^{\mathrm{br}}-q_0^{\mathrm{in}}|/(\mathrm{Lip}_*/2)$.
+$D_t J_+=-c\,\partial_r J_+-c\frac{d-1}{r}u$, $\det=c^6>0$.
+Degree-7 Hermite, $C_*=35/16$.
 \[
-\frac{d}{dt}\mathcal{E}+\frac78\kappa\int_I\omega\rho_0^2|\partial_t^4\partial_y w|^2
-\le C_1\mathcal{E}+C\|\sigma\|_{W^{4,\infty}}^2,
-\qquad
-C_1=C_{\mathrm{in}}+C_{\mathrm{vac}}+C_{\mathrm{int}}.
+\mathrm{Lip}_*=\min\bigl(1/|t_0|,\,\mu(t_0)(-t_0)^{-\lambda}/4\bigr).
 \]
-$C_{\mathrm{in}}$ and $C_{\mathrm{int}}$ are interior/cutoff constants.
-$C_{\mathrm{vac}}$ is finite under the cited embeddings.
-\[
-T^*=\min\Bigl(|t_0|,\,C_1^{-1}\ln\bigl(1+\tfrac{C_1 M_0}{C_1 M_0+C_2}\bigr)\Bigr).
-\]
+Trial space $V_*=\{\varphi\in H^1(I):\varphi(a_*)=0\}$.
+The edge is free: $v(1)=\dot R$.
+Cutoff $\omega\equiv0$ near $a_*$, $\omega\equiv1$ near vacuum.
 
-\section{Continuation}
-Mesh $t_k=t_0+kT^*$ reaches $t=0^-$ because the collar stays in the
-supersonic tail $\{r\ge r_{\mathrm{in}}>0\}$.
-$N\to\infty$ then $\kappa\to0$ by Aubin--Lions on $\{\omega=1\}$ and
-Rellich on $\{\omega=0\}$. The lock is exact on every approximant in $V_*$.
+\section{Energy and lifespan}
+Split $\mathcal{E}=\mathcal{E}_{\mathrm{in}}+\mathcal{E}_{\mathrm{vac}}$ on the model energy.
+Fluxes at $a_*$ die by $\varphi(a_*)=0$.
+Fluxes at $y=1$ die by $p(1)=\rho_0(1)=0$.
+On the $2M_0$ ball, $\eta_y\ge c_0>0$, so $J\in L^\infty$.
+Row~4 of the acoustic commutator is an $L^\infty\times L^2$ pairing because
+$\partial_y h_0=O(1)$ for every $\gamma>1$.
+Convective and metric products on $V_*$ are bounded by $C(M_0)\mathcal{E}$
+once the one-sided $\gamma=2$ embeddings of~\cite{CS2011} (Lemma~3.1 and energy~(1.13))
+are granted.
+Then
+\[
+T^*=\min\Bigl(|t_0|,\,
+C_1^{-1}\ln\bigl(1+\tfrac{C_1 M_0}{C_1 M_0+C_2}\bigr)\Bigr),
+\]
+with $C_1=C_{\mathrm{in}}+C_{\mathrm{vac}}+C_{\mathrm{int}}$ finite and independent of $N$ and $\kappa\in(0,1]$.
+
+\section{Continuation and the theorem}
+Mesh $t_k=t_0+kT^*$, $K=\lceil|t_0|/T^*\rceil$.
+Collar stays in $\{r\ge r_{\mathrm{in}}>0\}$.
+$N\to\infty$, $\kappa\to0$: Aubin--Lions on $\{\omega=1\}$,
+Rellich on $\{\omega=0\}$.
+Lock exact on $V_*$.
 Cone $\mathcal{K}=\{(t,r):r\le Z_s(-t)^\lambda\}$.
-Friedrichs system in $U=\bigl(\tfrac{2}{\gamma-1}c,u\bigr)$, $A_0=I$~\cite{Kato1975}.
-On the profile, $\dot r_s=\bar u-\bar c$, so $\delta U=0$ on $\mathcal{K}$.
+Friedrichs system in $U=\bigl(\tfrac{2}{\gamma-1}c,\,u\bigr)$, $A_0=I$~\cite{Kato1975}.
+On the profile, $\partial\mathcal{K}$ is a sonic characteristic:
+$\dot r_s=\bar u-\bar c$. Then $\delta U=0$ on $\mathcal{K}$.
 
 \begin{theorem}
-Assume the one-sided Coutand--Shkoller $\gamma=2$ embeddings of~\cite{CS2011},
-energy~(1.13) and Lemma~3.1, on the mixed chart with one lock and one vacuum end.
-For $\gamma\ge 2$ there is a compactly supported physical-vacuum solution on
-$[t_0,0)$ with $(\rho,u)=(\bar\rho,\bar u)$ on $\{Z\le Z_s\}$,
+Assume the one-sided pairings of~\cite{CS2011}, Lemma~3.1 and energy~(1.13),
+on $\{\omega=1\}$ for $\gamma\ge 2$.
+There is a compactly supported physical-vacuum solution on $[t_0,0)$ with
+$(\rho,u)=(\bar\rho,\bar u)$ on $\{Z\le Z_s\}$,
 $\rho=0$ for $r\ge R(t)$, and $R(t)>r_s(t)$.
 \end{theorem}
 
 \begin{remark}
-Not Clay. Not $\gamma\in(1,2)$. Theorem~8.1 is not used.
+Not Clay. Not $\gamma\in(1,2)$.
 \end{remark}
 
 \bibliographystyle{amsplain}
