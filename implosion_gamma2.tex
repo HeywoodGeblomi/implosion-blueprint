@@ -4,24 +4,23 @@
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}
 \theoremstyle{definition}
+\newtheorem{hypothesis}{Hypothesis}
 \newtheorem{remark}{Remark}
 
 \title[Compact support of an isentropic implosion]{Compact support of an isentropic implosion\\
-{\large $\gamma\ge 2$, a conditional letter}}
+{\large $\gamma\ge 2$, Theorem A\textsubscript{cond}}}
 \author{}
-\date{27 September 2026}
+\date{28 September 2026}
 
 \begin{document}
 
 \begin{abstract}
 A compactly supported physical-vacuum realisation of a radial isentropic
-self-similar implosion is constructed for adiabatic exponent $\gamma\ge 2$.
+self-similar implosion is reduced to one pairing on the vacuum sliver.
 Interior coincidence with the profile on the sonic cone is proved.
-Existence of the vacuum collar is conditional on the one-sided transfer of
-Coutand--Shkoller, \emph{Comm.\ Pure Appl.\ Math.}\ 64 (2011),
-Lemma~3.1 and the $\gamma=2$ model energy~(1.13),
-to a chart with one incoming lock and one vacuum end.
-Theorem~8.1 is not used.
+Existence of the vacuum collar is Theorem~A\textsubscript{cond}:
+it assumes Hypothesis~C4.1 below, and does not assume a transfer of
+Coutand--Shkoller energy~(1.13) to this chart.
 This is not a resolution of the Clay Navier--Stokes problem.
 \end{abstract}
 
@@ -30,7 +29,7 @@ This is not a resolution of the Clay Navier--Stokes problem.
 \section{Setting}
 Radial isentropic Euler, $d\in\{2,3\}$, $\gamma\ge 2$.
 Profile: Merle--Rapha\"el--Rodnianski--Szeftel~\cite{MRRS2022}
-or Buckmaster--Cao-Labora--G\'omez-Serrano~\cite{BCLGS2025}.
+or Buckmaster--Cao-Labora--\allowbreak G\'omez-Serrano~\cite{BCLGS2025}.
 Sonic ray $Z=Z_s$, $r_s(t)=Z_s(-t)^\lambda$.
 Collar $[r_{\mathrm{br}},R_0]$ with physical vacuum at $R_0$.
 Lock:
@@ -53,22 +52,29 @@ Trial space $V_*=\{\varphi\in H^1(I):\varphi(a_*)=0\}$.
 The edge is free: $v(1)=\dot R$.
 Cutoff $\omega\equiv0$ near $a_*$, $\omega\equiv1$ near vacuum.
 
-\section{Energy and lifespan}
+\section{Energy}
 Split $\mathcal{E}=\mathcal{E}_{\mathrm{in}}+\mathcal{E}_{\mathrm{vac}}$ on the model energy.
 Fluxes at $a_*$ die by $\varphi(a_*)=0$.
 Fluxes at $y=1$ die by $p(1)=\rho_0(1)=0$.
 On the $2M_0$ ball, $\eta_y\ge c_0>0$, so $J\in L^\infty$.
-Row~4 of the acoustic commutator is an $L^\infty\times L^2$ pairing because
-$\partial_y h_0=O(1)$ for every $\gamma>1$.
-Convective and metric products on $V_*$ are bounded by $C(M_0)\mathcal{E}$
-once the one-sided $\gamma=2$ embeddings of~\cite{CS2011} (Lemma~3.1 and energy~(1.13))
-are granted.
-Then
+Rows 2--4 of the acoustic commutator close as $C(M_0)\mathcal{E}$ plus at most
+$\tfrac1{16}\kappa$ dissipation.
+The remaining sliver pairing after integration by parts is Hypothesis~C4.1.
+
+\begin{hypothesis}[C4.1]
+Let $\varphi=\partial_t^4 w$. On the vacuum sliver,
+\[
+\Bigl|\int(\partial_t^3 p)\,v_y\,\varphi_y\,dy\Bigr|
+\le C(M_0)\mathcal{E}+\tfrac1{32}\kappa\int\rho_0^2|\varphi_y|^2\,dy.
+\]
+\end{hypothesis}
+
+Granted C4.1, the lifespan
 \[
 T^*=\min\Bigl(|t_0|,\,
-C_1^{-1}\ln\bigl(1+\tfrac{C_1 M_0}{C_1 M_0+C_2}\bigr)\Bigr),
+C_1^{-1}\ln\bigl(1+\tfrac{C_1 M_0}{C_1 M_0+C_2}\bigr)\Bigr)
 \]
-with $C_1=C_{\mathrm{in}}+C_{\mathrm{vac}}+C_{\mathrm{int}}$ finite and independent of $N$ and $\kappa\in(0,1]$.
+is positive and independent of $N$ and $\kappa\in(0,1]$.
 
 \section{Continuation and the theorem}
 Mesh $t_k=t_0+kT^*$, $K=\lceil|t_0|/T^*\rceil$.
@@ -81,16 +87,17 @@ Friedrichs system in $U=\bigl(\tfrac{2}{\gamma-1}c,\,u\bigr)$, $A_0=I$~\cite{Kat
 On the profile, $\partial\mathcal{K}$ is a sonic characteristic:
 $\dot r_s=\bar u-\bar c$. Then $\delta U=0$ on $\mathcal{K}$.
 
-\begin{theorem}
-Assume the one-sided pairings of~\cite{CS2011}, Lemma~3.1 and energy~(1.13),
-on $\{\omega=1\}$ for $\gamma\ge 2$.
-There is a compactly supported physical-vacuum solution on $[t_0,0)$ with
-$(\rho,u)=(\bar\rho,\bar u)$ on $\{Z\le Z_s\}$,
+\begin{theorem}[A\textsubscript{cond}]
+Assume Hypothesis~C4.1. There is a compactly supported physical-vacuum
+solution on $[t_0,0)$ with $(\rho,u)=(\bar\rho,\bar u)$ on $\{Z\le Z_s\}$,
 $\rho=0$ for $r\ge R(t)$, and $R(t)>r_s(t)$.
 \end{theorem}
 
 \begin{remark}
-Not Clay. Not $\gamma\in(1,2)$.
+Not Clay. Not an unconditional existence theorem. Not $\gamma\in(1,2)$.
+Coutand--Shkoller~\cite{CS2011} energy~(1.13) is cited only as the known
+source of an unweighted $H^2$ bound on a two-vacuum-end interval; that bound
+is not proved on $V_*$.
 \end{remark}
 
 \bibliographystyle{amsplain}
