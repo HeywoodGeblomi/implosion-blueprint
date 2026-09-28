@@ -1,0 +1,91 @@
+\documentclass{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\title[Compact support of an isentropic implosion]{Compact support of an isentropic implosion for $\gamma\ge 2$\\
+{\large A conditional 1D collar theorem}}
+\author{}
+\date{27 September 2026}
+
+\begin{document}
+
+\begin{abstract}
+A compactly supported physical-vacuum realisation of a radial isentropic
+self-similar implosion is constructed for adiabatic exponents $\gamma\ge 2$.
+Coincidence with the background profile on the sonic cone is proved by Kato.
+Existence of the vacuum collar is reduced to a mixed one-dimensional
+free-boundary problem and is conditional on the one-sided transfer of the
+Coutand--Shkoller $\gamma=2$ embeddings (energy~(1.13) and Lemma~3.1).
+Theorem~8.1 is not used. This is not a resolution of the Clay
+Navier--Stokes problem.
+\end{abstract}
+
+\maketitle
+
+\section{Setting}
+Radial isentropic Euler, $d\in\{2,3\}$, $\gamma\ge 2$.
+Profile: Merle--Rapha\"el--Rodnianski--Szeftel~\cite{MRRS2022}
+or Buckmaster--Cao-Labora--G\'omez-Serrano~\cite{BCLGS2025}.
+Sonic ray $Z=Z_s$, $r_s(t)=Z_s(-t)^\lambda$.
+Collar $[r_{\mathrm{br}},R_0]$ with physical vacuum at $R_0$.
+Lock
+\[
+J_+(t,a_*)=\sigma(t)=\bar J_+\bigl(t,\bar\eta(t,\bar a_*)\bigr)
+\quad\text{on }[t_0,0).
+\]
+
+\section{Bridge and variational setting}
+$Z_0$ first, then $L$. Tail jets below $\mathrm{Lip}_*/8$, then
+$L>(35/16)|q_0^{\mathrm{br}}-q_0^{\mathrm{in}}|/(\mathrm{Lip}_*/2)$.
+Jet map $\det=c^6>0$. Degree-7 Hermite, $C_*=35/16$.
+Trial space $V_*=\{\varphi\in H^1((a_*,1)):\varphi(a_*)=0\}$.
+The vacuum edge is free: $v(1)=\dot R$.
+Cutoff $\omega\equiv0$ near the lock, $\omega\equiv1$ near vacuum.
+
+\section{Model energy}
+Split $\mathcal{E}=\mathcal{E}_{\mathrm{in}}+\mathcal{E}_{\mathrm{vac}}$.
+Fluxes die at $a_*$ by the lock and at $y=1$ by $p(1)=\rho_0(1)=0$.
+Convective and metric products close on the model-energy ball by the
+1D embeddings in Coutand--Shkoller~\cite{CS2011}, energy~(1.13) and
+Lemma~3.1, transferred to one vacuum end. Those embeddings are local
+and do not use a second vacuum end.
+\[
+\frac{d}{dt}\mathcal{E}+\frac78\kappa\int_I\omega\rho_0^2|\partial_t^4\partial_y w|^2
+\le C_1\mathcal{E}+C\|\sigma\|_{W^{4,\infty}}^2,
+\qquad
+C_1=C_{\mathrm{in}}+C_{\mathrm{vac}}+C_{\mathrm{int}}.
+\]
+$C_{\mathrm{in}}$ and $C_{\mathrm{int}}$ are interior/cutoff constants.
+$C_{\mathrm{vac}}$ is finite under the cited embeddings.
+\[
+T^*=\min\Bigl(|t_0|,\,C_1^{-1}\ln\bigl(1+\tfrac{C_1 M_0}{C_1 M_0+C_2}\bigr)\Bigr).
+\]
+
+\section{Continuation}
+Mesh $t_k=t_0+kT^*$ reaches $t=0^-$ because the collar stays in the
+supersonic tail $\{r\ge r_{\mathrm{in}}>0\}$.
+$N\to\infty$ then $\kappa\to0$ by Aubin--Lions on $\{\omega=1\}$ and
+Rellich on $\{\omega=0\}$. The lock is exact on every approximant in $V_*$.
+Cone $\mathcal{K}=\{(t,r):r\le Z_s(-t)^\lambda\}$.
+Friedrichs system in $U=\bigl(\tfrac{2}{\gamma-1}c,u\bigr)$, $A_0=I$~\cite{Kato1975}.
+On the profile, $\dot r_s=\bar u-\bar c$, so $\delta U=0$ on $\mathcal{K}$.
+
+\begin{theorem}
+Assume the one-sided Coutand--Shkoller $\gamma=2$ embeddings of~\cite{CS2011},
+energy~(1.13) and Lemma~3.1, on the mixed chart with one lock and one vacuum end.
+For $\gamma\ge 2$ there is a compactly supported physical-vacuum solution on
+$[t_0,0)$ with $(\rho,u)=(\bar\rho,\bar u)$ on $\{Z\le Z_s\}$,
+$\rho=0$ for $r\ge R(t)$, and $R(t)>r_s(t)$.
+\end{theorem}
+
+\begin{remark}
+Not Clay. Not $\gamma\in(1,2)$. Theorem~8.1 is not used.
+\end{remark}
+
+\bibliographystyle{amsplain}
+\bibliography{references}
+\end{document}
